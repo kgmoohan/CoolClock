@@ -26,7 +26,7 @@ public class ProximityService extends Service {
         @Override
         public void onSensorChanged(SensorEvent sensorEvent) {
             float[] its = sensorEvent.values;
-            Log.d(TAG, String.format("its %f %f %f len:,%d", its[0], its[1], its[2], its.length));
+//            Log.d(TAG, String.format("its %f %f %f len:,%d", its[0], its[1], its[2], its.length));
             if (sensorEvent.sensor.getType() == Sensor.TYPE_PROXIMITY) {
                 if (FuncUnit.isForeground(ClockApplication.getContext(), MainActivity.class.getName())) {
                     if (its[0] == 0.0) {
